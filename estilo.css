@@ -1,0 +1,233 @@
+@charset "utf-8";
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    border: 1px solid #069;
+    border-radius: 5px;
+    background-color: #ffab4b;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    background-color: #ff8c00;
+    text-align: center; /* Centrar contenido */
+    padding: 20px;
+}
+
+.header-image {
+    max-width: 100%; /* Asegura que la imagen no desborde */
+    height: auto; /* Mantiene la relación de aspecto */
+    margin-bottom: 10px; /* Espacio entre la imagen y el título */
+}
+
+header h1 {
+    margin: 0;
+    color: white;
+    font-size: 2em; /* Ajusta el tamaño del título según sea necesario */
+}
+
+nav {
+    background-color: #ff6f00;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Cambiado a flexbox */
+    justify-content: center; /* Centrar contenido */
+    flex-wrap: wrap; /* Permitir que los elementos se envuelvan */
+}
+
+nav ul li {
+    flex: 1; /* Cada ítem ocupa el mismo espacio */
+    min-width: 150px; /* Ancho mínimo para los elementos */
+}
+
+nav ul li a {
+    display: block; /* Hace que el enlace ocupe todo el espacio del li */
+    padding: 15px 20px; /* Aumenta el área clicable */
+    color: white;
+    text-decoration: none;
+    text-align: center; /* Centra el texto */
+}
+
+nav ul li a:hover {
+    background-color: #ff8c00; /* Efecto hover */
+}
+
+main {
+    display: flex; /* Usamos flexbox para que los elementos estén alineados en una fila */
+    justify-content: space-between; /* Separa los elementos dentro del contenedor */
+    margin: 20px 0; /* Margen superior e inferior para separación */
+}
+
+.content {
+    flex: 1 1 70%; /* Cambié el 70% a 48% para que ocupe menos espacio y que quepan juntos */
+    background-color: #ffffffb6;
+    padding: 20px;
+    margin: 10px;
+}
+
+.offer {
+    flex: 1 1 30%; /* Cambié el 25% a 48% para que ocupe menos espacio y que quepan juntos */
+    background-color: #ffffffb6;
+    padding: 20px;
+    height: 400px;
+    margin: 10px;
+    text-align: center;
+    
+}
+
+footer {
+    background-color: #ff8c00;
+    text-align: center;
+    padding: 10px;
+}
+
+footer p {
+    margin: 0;
+    color: white;
+}
+
+img {
+    max-width: 100%;   /* Asegura que la imagen nunca se salga del ancho del contenedor */
+    height: auto;      /* Mantiene la relación de aspecto original de la imagen */
+    object-fit: cover; /* Ajusta la imagen para que cubra el contenedor sin distorsionarse */
+}
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+    }
+
+    .content, .offer {
+        flex: 1 1 100%; /* Cambia a 100% en pantallas pequeñas */
+    }
+}
+
+/* Estilos para opcion proyectos */
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.project-item {
+    flex: 1 1 45%; /* Ajusta el tamaño de cada servicio (se ajusta al 45% del ancho) */
+    background-color: #ffffffb6;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.project-item img {
+    width: 500px;  /* Ajusta el ancho deseado */
+    height: 300px; /* Ajusta el alto deseado */
+    object-fit: cover; /* Esto asegurará que la imagen se recorte para llenar el área sin distorsionarse */
+}
+
+.project-item h3 {
+    color: #ff8c00;
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+.project-item p {
+    font-size: 1em;
+    color: #333;
+}
+
+/* Estilos para opcion servicio */
+.service-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.service-item {
+    flex: 1 1 45%; /* Ajusta el tamaño de cada servicio (se ajusta al 45% del ancho) */
+    background-color: #ffffffb6;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.service-item img {
+    width: 500px;  /* Ajusta el ancho deseado */
+    height: 300px; /* Ajusta el alto deseado */
+    object-fit: cover; /* Esto asegurará que la imagen se recorte para llenar el área sin distorsionarse */
+}
+
+.service-item h3 {
+    color: #ff8c00;
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+.service-item p {
+    font-size: 1em;
+    color: #333;
+}
+
+/* Estilos para el formulario de contacto */
+.contact-form-container {
+    background-color: #ffffff;
+    border: 1px solid #ff8c00;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 600px;
+    margin: 30px auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    color: #333;
+    font-size: 1.1em;
+    margin-bottom: 5px;
+}
+
+.input-group input, .input-group textarea {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.input-group textarea {
+    resize: vertical;
+}
+
+.input-group button {
+    width: 100%;
+    padding: 12px;
+    background-color: #ff8c00;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.input-group button:hover {
+    background-color: #e67e00;
+}
